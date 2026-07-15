@@ -58,7 +58,7 @@ Antes de iniciar la clase, cada alumno debe tener lo siguiente.
 ```text
 Cuenta de Azure
 Cuenta de GitHub
-Cuenta de ChatGPT / Codex
+Cuenta de una herramienta de IA con modo agente
 Suscripcion activa de Azure
 Permisos para crear recursos en Azure
 Permisos para crear repositorios en GitHub
@@ -68,20 +68,41 @@ En Azure se usara una suscripcion activa y un resource group del curso.
 
 En GitHub se usara un repositorio para guardar codigo, Bicep y GitHub Actions.
 
-### Herramientas Locales
+La herramienta de IA puede ser cualquiera que tenga modo agente y pueda trabajar sobre el proyecto: leer archivos, editar codigo, ejecutar comandos, revisar errores y explicar los cambios. Ejemplos: Codex, Claude, ChatGPT con modo agente u otra herramienta equivalente.
+
+### Editor De Codigo
+
+Usar uno de estos editores:
 
 ```text
-macOS
+Visual Studio compatible con .NET 10
+Visual Studio Code
+```
+
+Para alumnos que estan empezando con .NET, Visual Studio es la opcion mas completa. Para alumnos que prefieren terminal y extensiones ligeras, VS Code funciona muy bien.
+
+Extensiones recomendadas para VS Code:
+
+```text
+C# Dev Kit
+Azure Tools
+GitHub Actions
+Bicep
+```
+
+### macOS
+
+Herramientas:
+
+```text
 Homebrew
 .NET 10 SDK
 Azure CLI
 Git
 GitHub CLI
-Editor de codigo
-Codex / ChatGPT conectado al workspace local
+Visual Studio Code
+Herramienta de IA con modo agente conectada al workspace local
 ```
-
-### Instalacion En macOS Con Homebrew
 
 Instalar Homebrew, si aun no existe:
 
@@ -113,16 +134,71 @@ Instalar .NET 10 SDK:
 brew install --cask dotnet-sdk
 ```
 
+Instalar Visual Studio Code:
+
+```bash
+brew install --cask visual-studio-code
+```
+
 Si ya tienes .NET instalado, valida que incluya .NET 10:
 
 ```bash
 dotnet --list-sdks
 ```
 
-Comandos utiles para validar:
+Comandos utiles para validar en macOS:
 
 ```bash
 brew --version
+dotnet --version
+az --version
+git --version
+gh --version
+```
+
+### Windows
+
+Herramientas:
+
+```text
+.NET 10 SDK
+Azure CLI
+Git
+GitHub CLI
+Visual Studio o Visual Studio Code
+Herramienta de IA con modo agente conectada al workspace local
+```
+
+Instalar con Winget:
+
+```powershell
+winget install Microsoft.DotNet.SDK.10
+winget install Microsoft.AzureCLI
+winget install Git.Git
+winget install GitHub.cli
+```
+
+Instalar Visual Studio Code:
+
+```powershell
+winget install Microsoft.VisualStudioCode
+```
+
+O instalar Visual Studio:
+
+```powershell
+winget install Microsoft.VisualStudio.2022.Community
+```
+
+En Visual Studio, instalar la carga de trabajo:
+
+```text
+ASP.NET and web development
+```
+
+Comandos utiles para validar en Windows:
+
+```powershell
 dotnet --version
 az --version
 git --version
