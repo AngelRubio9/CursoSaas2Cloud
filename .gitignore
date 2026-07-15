@@ -239,6 +239,7 @@ publish/
 # Local deployment/database artifacts
 *.zip
 app.db
+infra/main.json
 
 # Publish Web Output
 *.[Pp]ublish.xml
