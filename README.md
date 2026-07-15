@@ -68,7 +68,7 @@ En Azure se usara una suscripcion activa y un resource group del curso.
 
 En GitHub se usara un repositorio para guardar codigo, Bicep y GitHub Actions.
 
-La herramienta de IA puede ser cualquiera que tenga modo agente y pueda trabajar sobre el proyecto: leer archivos, editar codigo, ejecutar comandos, revisar errores y explicar los cambios. Ejemplos: Codex, Claude, ChatGPT con modo agente u otra herramienta equivalente.
+La herramienta de IA puede ser cualquiera que tenga modo agente y pueda trabajar sobre el proyecto: leer archivos, editar codigo, ejecutar comandos, revisar errores y explicar los cambios. La idea es que el flujo del curso se adapte a la herramienta que cada alumno ya tenga disponible. Ejemplos: Codex, Claude, ChatGPT con modo agente u otra herramienta equivalente.
 
 ### Editor De Codigo
 
