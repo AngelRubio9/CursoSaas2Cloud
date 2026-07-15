@@ -51,28 +51,115 @@ https://saasia-cursoaz2.azurewebsites.net
 
 ## Requisitos
 
-En la maquina local:
+Antes de iniciar la clase, cada alumno debe tener lo siguiente.
+
+### Cuentas
 
 ```text
+Cuenta de Azure
+Cuenta de GitHub
+Cuenta de ChatGPT / Codex
+Suscripcion activa de Azure
+Permisos para crear recursos en Azure
+Permisos para crear repositorios en GitHub
+```
+
+En Azure se usara una suscripcion activa y un resource group del curso.
+
+En GitHub se usara un repositorio para guardar codigo, Bicep y GitHub Actions.
+
+### Herramientas Locales
+
+```text
+macOS
+Homebrew
 .NET 10 SDK
 Azure CLI
 Git
 GitHub CLI
-Homebrew, si estas en macOS
-Cuenta de Azure
-Cuenta de GitHub
-Codex / ChatGPT conectado al workspace
+Editor de codigo
+Codex / ChatGPT conectado al workspace local
+```
+
+### Instalacion En macOS Con Homebrew
+
+Instalar Homebrew, si aun no existe:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Instalar Git:
+
+```bash
+brew install git
+```
+
+Instalar Azure CLI:
+
+```bash
+brew install azure-cli
+```
+
+Instalar GitHub CLI:
+
+```bash
+brew install gh
+```
+
+Instalar .NET 10 SDK:
+
+```bash
+brew install --cask dotnet-sdk
+```
+
+Si ya tienes .NET instalado, valida que incluya .NET 10:
+
+```bash
+dotnet --list-sdks
 ```
 
 Comandos utiles para validar:
 
 ```bash
+brew --version
 dotnet --version
 az --version
 git --version
 gh --version
+```
+
+### Login Y Configuracion Inicial
+
+Iniciar sesion en Azure:
+
+```bash
+az login
 az account show --output table
+az account list --output table
+az account set --subscription "<NOMBRE_O_ID_DE_LA_SUSCRIPCION>"
+```
+
+Iniciar sesion en GitHub:
+
+```bash
+gh auth login
 gh auth status
+```
+
+Configurar autor de Git:
+
+```bash
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu-correo@example.com"
+```
+
+### Validacion Con IA
+
+Prompt sugerido:
+
+```text
+Revisa mi entorno local. Confirma si tengo Homebrew, dotnet, Azure CLI, Git y GitHub CLI instalados. Tambien valida si estoy autenticado en Azure y GitHub. Si falta algo, dame el comando exacto para corregirlo.
 ```
 
 ## Modulo 1: Preparar El Entorno Con IA
